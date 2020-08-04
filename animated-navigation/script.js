@@ -37,3 +37,40 @@ menuBars.addEventListener('click', toggleNav);
 navItems.forEach((nav) => {
   nav.addEventListener('click', toggleNav);
 });
+
+
+
+/* loader animation */
+
+
+window.onload = function () {
+  const loader = document.getElementById('loader');
+
+  // .box に .loaded を追加してローディング表示を消す
+  loader.classList.add('loaded');
+}
+
+
+const { body } = document;
+
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.getElementById('toggle-icon');
+
+function switchTheme(event) {
+  if (event.target.checked) {
+    body.classList.add('background-dark-theme');
+    toggleIcon.children[0].textContent = 'Dark Mode'
+    toggleIcon.children[1].classList.remove('fa-sun');
+    toggleIcon.children[1].classList.add('fa-moon');
+
+  } else {
+    body.classList.remove('background-dark-theme');
+    toggleIcon.children[0].textContent = 'Light Mode'
+    toggleIcon.children[1].classList.add('fa-sun');
+    toggleIcon.children[1].classList.remove('fa-moon');
+
+
+  }
+}
+
+toggleSwitch.addEventListener('change', switchTheme);

@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Navigation</title>
-  <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design">
-  <link rel="stylesheet" href="style.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nirvana Lab.</title>
+  <link href="./img/flask_blueheart_siteicow.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link href="css/style.css" rel="stylesheet">
+   <!-- Font-Awesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+  <!-- AOS CSS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <!-- Menu Overlay -->
   <div class="overlay overlay-slide-left" id="overlay">
     <!-- Menu Items -->
     <nav>
       <ul>
-        <li id="nav-1" class="slide-out-1"><a href="#home">Home</a></li>
-        <li id="nav-2" class="slide-out-2"><a href="#about">About</a></li>
-        <li id="nav-3" class="slide-out-3"><a href="#skills">Skills</a></li>
-        <li id="nav-4" class="slide-out-4"><a href="#projects">Projects</a></li>
-        <li id="nav-5" class="slide-out-5"><a href="#contact">Contact</a></li>
+        <li class="slide-out-1" id="nav-1">
+          <a href="#home">Home</a>
+        </li>
+        <li class="slide-out-2" id="nav-2">
+          <a href="#our-service">Our Service</a>
+        </li>
+        <li class="slide-out-3" id="nav-3">
+          <a href="#our-teams">Our Teams</a>
+        </li>
+        <li class="slide-out-4" id="nav-4">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="slide-out-5" id="nav-5">
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -27,13 +44,341 @@
     <div class="bar2"></div>
     <div class="bar3"></div>
   </div>
+  <!-- Dark Mode Switch -->
+  <div class="theme-switch-wrapper">
+      <span id="toggle-icon">
+          <span class="toggle-text">Light Mode</span>
+          <i class="fas fa-sun"></i>
+      </span>
+      <label class="theme-switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+      </label>
+  </div>
+
   <!-- Sections -->
-  <section id="home"><a href="https://jacinto.design" target="_blank">Jacinto Design</a></section>
-  <section id="about"><h1>Learn More About Me</h1></section>
-  <section id="skills"><h1>These Are My Strengths</h1></section>
-  <section id="projects"><h1>These Are My Results</h1></section>
-  <section id="contact"><h1>Available Anytime</h1></section>
+  <section id="home">
+    <div class="loader" id="loader">
+      <img src="/img/loader.svg" alt="loader-spinner">
+    </div>
+    <a href="/">Nirvana Lab.</a>
+  </section>
+  <div class="section-wrapper-our-service">
+    <section id="our-service">
+      <div class="container">
+        <h1 class="section-title" data-aos="fade-down">Our Service</h1>
+        <div class="card-outer-wrapper" data-aos="fade-right" data-aos-delay="700">
+          <div class="card-container">
+            <h2>WordPress<br>
+              <span class="sub-title">
+                ワードプレスサイト制作
+              </span></h2>
+            <div class="img-container">
+              <img src="img/undraw_wordpress_utxt.svg" alt="WordPress Website" id="image1">
+            </div>
+          </div>
+          <div class="card-container">
+            <h2>E-Commerce<br>
+              <span class="sub-title">
+                Shopify等を使用したECサイト制作
+              </span>
+            </h2>
+            <div class="img-container">
+              <img src="img/undraw_online_shopping_ga73.svg" alt="E-commerce Sites" id="image2">
+            </div>
+          </div>
+          <div class="card-container">
+            <h2>Illustration<br>
+              <span class="sub-title">
+                メッセージを伝えるイラスト
+              </span></h2>
+            <div class="img-container">
+              <img src="img/undraw_art_0tat.svg" alt="Idea" id="image3">
+            </div>
+          </div>
+        </div>
+        <div class="card-outer-wrapper" data-aos="fade-left" ="900">
+          <div class="card-container">
+            <h2>Translation<br>
+              <span class="sub-title">
+                翻訳・ローカライゼーション
+              </span></h2>
+            <div class="img-container">
+              <img src="img/undraw_around_the_world_v9nu.svg" alt="Translation/Localization" id="image4">
+            </div>
+          </div>
+          <div class="card-container">
+            <h2>Writing<br>
+              <span class="sub-title">
+                ココロをコトバに
+              </span></h2>
+            <div class="img-container">
+              <img src="img/undraw_wall_post_83ul.svg" alt="Writing" id="image5">
+            </div>
+          </div>
+          <div class="card-container">
+            <h2>Meditation<br>
+              <span class="sub-title">
+                瞑想と祈り
+              </span></h2>
+            <div class="img-container">
+              <img src="img/undraw_mindfulness_scgo.svg" alt="Meditation" id="image6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-wrapper-our-teams">
+    <section id="our-teams">
+      <h1 data-aos="fade-down">These Are Our Teams</h1>
+      <div class="container">
+        <div class="our-teams-row">
+
+          <div class="our-teams-col-6">
+            <div class="our-teams-img-wrapper" data-aos="fade-up-right" data-aos-delay="700">
+              <img src="img/yuya-sato-profilepic.jpg" alt="Yuya Satoプロフィール画像">
+            </div>
+          </div>
+          <div class="our-teams-col-6" data-aos="zoom-in" data-aos-delay="900">
+            <div class="our-teams-info-wrapper">
+              <h2 class="our-teams-info-title">
+                Yuya Sato
+              </h2>
+              <div class="portfolio-btn" onclick="window.open('https://nirvana-lab.com/portfolio')">
+                View Portfolio
+                <div class="portfolio-btn__horizontal"></div>
+                <div class="portfolio-btn__vertical"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="our-teams-row">
+          <div class="our-teams-col-6">
+            <div class="our-teams-img-wrapper" data-aos="zoom-out" ="1100">
+              <img src="img/suomi-sekiya-profilepic.jpg" alt="Suomi Sekiyaプロフィール画像">
+            </div>
+          </div>
+          <div class="our-teams-col-6" data-aos="fade-left" ="1300">
+            <div class="our-teams-info-wrapper">
+              <h2 class="our-teams-info-title">
+                Suomi Sekiya
+              </h2>
+              <div class="portfolio-btn" onclick="window.open('https://craftyclafouti.net/portfolio')">
+                View Portfolio
+                <div class="portfolio-btn__horizontal"></div>
+                <div class="portfolio-btn__vertical"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <ul class="our-teams-name">
+        <li>
+          <a href="https://nirvana-lab.com/portfolio/">Yuya Sato</a></li>
+        <li><a href="">
+            Suomi Seikiya
+          </a>
+        </li>
+      </ul> -->
+      <!-- <div class="foo">
+        <span class="letter" data-letter="Y">Y</span>
+        <span class="letter" data-letter="U">U</span>
+        <span class="letter" data-letter="Y">Y</span>
+        <span class="letter" data-letter="A">A</span>
+        <span class="letter" data-letter="S">S</span>
+        <span class="letter" data-letter="A">A</span>
+        <span class="letter" data-letter="T">T</span>
+        <span class="letter" data-letter="O">O</span>
+        <br />
+        <span class="letter" data-letter="I">I</span>
+        <span class="letter" data-letter="L">L</span>
+        <span class="letter" data-letter="M">M</span>
+        <span class="letter" data-letter="N">N</span>
+        <span class="letter" data-letter="O">O</span>
+        <span class="letter" data-letter="P">P</span>
+        <span class="letter" data-letter="Q">Q</span>
+        <span class="letter" data-letter="R">R</span>
+        <span class="letter" data-letter="S">S</span>
+        <span class="letter" data-letter="T">T</span>
+        <span class="letter" data-letter="U">U</span>
+        <span class="letter" data-letter="V">V</span>
+        <span class="letter" data-letter="Z">Z</span>
+      </div> -->
+
+    </section>
+  </div>
+  <div class="section-wrapper-projects">
+    <section id="projects">
+      <h1 data-aos="fade-left" ="1000">These Are Our Results</h1>
+      <div class="container">
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">チベット・ネパール曼荼羅専門ショップ</h3>
+              <p class="projects-info-description">
+                Shopifyを使用して多言語対応ECサイトの制作・構築そして運営を担当させて頂きました。
+              </p>
+              <button class="bw" type="button" onclick="window.open('https://spacenowhere.com/')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="https://spacenowhere.com/" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/project-01-thumbnail.jpg">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">シネックスジャパン株式会社 様</h3>
+              <p class="projects-info-description">
+                HTML, CSSのコーディングをゼロから担当させていただきました。
+              </p>
+              <button class="bw" type="button" onclick="window.open('https://www.nexpect.jp/edu_sol/')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="https://www.nexpect.jp/edu_sol/" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/project-02-thumbnail.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">英語書籍の日本語翻訳</h3>
+              <p class="projects-info-description">
+                ネパールにてベストセラーの全400ページの英語書籍スワミ・アナンド・アルン著「イン・ワンダー・ウィズ・オショー」を日本語に翻訳しました。この書籍はロシア語、ヒンディー語、中国語にすでに翻訳されています。
+              </p>
+              <button class="bw" type="button" onclick="window.open('https://spaceosho.com/inwonderwithosho/')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="https://spaceosho.com/inwonderwithosho/" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/iwwo.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">たねまきハウス全体図　イラストマップ</h3>
+              <p class="projects-info-description">
+              </p>
+              <button class="bw" type="button" onclick="window.open('img/tanemakihouse.png')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="img/tanemakihouse.png" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/tanemakihouse.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">トランジションタウン文京 リーフレット</h3>
+              <p class="projects-info-description">
+              </p>
+              <button class="bw" type="button" onclick="window.open('img/ttbunkyo_leaflet.png')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="img/ttbunkyo_leaflet.png" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/ttbunkyo_leaflet.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="projects-row">
+          <div class="projects-col-4">
+            <div class="projects-info-wrapper">
+              <h3 class="projects-info-title">トランジションタウン文京 Webサイト</h3>
+              <p class="projects-info-description">
+              </p>
+              <button class="bw" type="button" onclick="window.open('https://ttbunkyo.com/')">
+                See Live
+              </button>
+            </div>
+          </div>
+          <div class="projects-col-8">
+            <div class="projects-img-wrapper">
+              <a href="https://ttbunkyo.com/" target="_blank">
+                <div data-tilt="" class="thumbnail rounded">
+                  <img class="img-fluid" src="img/ttbunkyo_site.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section id="contact">
+    <h1 data-aos="fade-down-left" ="1000">Available Anytime<br>
+      <span class="jp-text">
+        何でもお気軽にお問い合わせください。
+      </span></h1>
+    <div class="portfolio-btn" data-aos="fade-up-right" ="1300">
+      <a
+        href="mailto:info@nirvana-lab.com?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&amp;body=%E4%B8%8B%E8%A8%98%E9%A0%85%E7%9B%AE%E3%81%AE%E3%80%8C%E3%80%8D%E3%81%AB%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E8%A8%98%E5%85%A5%E3%81%97%E3%81%A6%E9%80%81%E4%BF%A1%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0D%0A%0D%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0D%0A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%E3%80%8C%E3%80%8D%0D%0A%0D%0A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%E3%80%8C%E3%80%8D%0D%0A%0D%0A%E4%BD%8F%E6%89%80%EF%BC%9A%E3%80%8C%E3%80%8D%0D%0A%0D%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D">Contact</a>
+      <div class="portfolio-btn__horizontal"></div>
+      <div class="portfolio-btn__vertical"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-copyright">
+      <span>© 2020, Nirvana Lab.</span>
+    </div>
+  </footer>
   <!-- Script -->
   <script src="script.js"></script>
+  <!-- AOS JS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      delay: 200, // values from 0 to 3000, with step 50ms
+      duration: 1500, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past the
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
 </body>
+
 </html>
